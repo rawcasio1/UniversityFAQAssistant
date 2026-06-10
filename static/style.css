@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #0b3d91; /* University Blue */
+    --secondary-color: #fbd600; /* Gold */
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --bot-bg: #e2e8f0;
+    --user-bg: #0b3d91;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chatbot UI */
+.chat-container {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.chat-header h2 { margin: 0; font-size: 1.2rem; }
+.chat-header p { margin: 5px 0 0 0; font-size: 0.8rem; opacity: 0.8; }
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 85%;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.bot-message {
+    background-color: var(--bot-bg);
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.user-message {
+    background-color: var(--user-bg);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.response-card { margin-top: 10px; padding: 10px; background: white; border-radius: 6px; border-left: 4px solid var(--primary-color); color: #333;}
+.response-card strong { color: var(--primary-color); }
+.meta-info { font-size: 0.8rem; color: #666; margin-top: 8px; border-top: 1px solid #ccc; padding-top: 5px;}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.chat-input-area button {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0 20px;
+    margin-left: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.chat-input-area button:hover { opacity: 0.9; }
+
+.footer-links { text-align: center; padding: 10px; font-size: 0.8rem; background: #fafafa;}
+.footer-links a { color: var(--primary-color); text-decoration: none; }
+
+/* Admin UI */
+.admin-body { display: block; height: auto; padding: 40px; background: var(--bg-color);}
+.admin-container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 20px;}
+.back-link { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+
+.admin-form { background: var(--bot-bg); padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px;}
+.admin-form input, .admin-form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit;}
+.save-btn { background: var(--primary-color); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; font-weight: bold;}
+.clear-btn { background: #999; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;}
+
+.faq-table { width: 100%; border-collapse: collapse; }
+.faq-table th, .faq-table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+.faq-table th { background: var(--primary-color); color: white; }
+.action-btn { padding: 5px 10px; border: none; border-radius: 4px; cursor: pointer; margin-right: 5px;}
+.edit-btn { background: #4caf50; color: white; }
+.del-btn { background: #f44336; color: white; }
+

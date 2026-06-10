@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - FAQ Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <header class="admin-header">
+            <h2>⚙️ FAQ Management Panel</h2>
+            <a href="/" class="back-link">Back to Chatbot</a>
+        </header>
+
+        <div class="admin-form">
+            <h3>Add / Edit FAQ</h3>
+            <input type="hidden" id="faq-id">
+            <input type="text" id="faq-title" placeholder="Title (e.g., Leave of Absence)">
+            <input type="text" id="faq-section" placeholder="Policy Section (e.g., Section 4.2)">
+            <input type="text" id="faq-keywords" placeholder="Keywords (e.g., apply loa leave absence)">
+            <input type="text" id="faq-question" placeholder="Sample Question">
+            <textarea id="faq-answer" rows="3" placeholder="Official Answer/Policy..."></textarea>
+            <button onclick="saveFAQ()" class="save-btn">Save FAQ</button>
+            <button onclick="clearForm()" class="clear-btn">Clear Form</button>
+        </div>
+
+        <table class="faq-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title & Section</th>
+                    <th>Keywords</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="faq-table-body">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
